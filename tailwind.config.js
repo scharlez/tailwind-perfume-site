@@ -15,6 +15,10 @@ module.exports = {
 				}
 			}
 		},
+		fontSize: {
+			'xs': '0.75rem',
+			'3xl':'1.875rem',
+		}
 			
 
 
