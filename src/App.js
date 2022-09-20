@@ -1,15 +1,21 @@
 import React from "react";
 
 function App() {
+
+	const windowWidth = window.innerWidth;
+	let imageFile = '';
+	windowWidth < 420 ? imageFile = './images/image-product-mobile.jpg' :imageFile = './images/image-product-desktop.jpg';
+	
+	console.log(windowWidth)
 	return (
 		<div className=" bg-primary-cream h-screen w-screen flex justify-center items-center pb-12">
-			<div className="border-2 rounded-xl mx-6 mt-12 h-full lg:w-10/12 bg-white">
+			<div className="border-2 rounded-xl mx-6 mt-12 h-full lg:w-10/12 bg-white lg:flex lg:items-center lg:justify-center lg:rounded-md lg:object-fill lg:min-h-0">
 				<img
 					className="rounded-t-xl"
-					src="./images/image-product-mobile.jpg"
+					src={imageFile}
 					alt="perfume for ad"
 				/>
-				<div className="">
+				<div className="lg:w-1/2 lg:m-5">
 					<div className="w-full h-1/6 text-neutral-dark-grayish-blue font-['Monserrat] text-xs pl-8 mt-6">
 						P E R F U M E
 					</div>
@@ -29,7 +35,7 @@ function App() {
 						<div className="w-full line-through text-neutral-dark-grayish-blue">169.99</div>
 				</div>
 					<div className="justify-end">
-					<div className="flex items-center bg-green-700 text-white border-1/2 text-sm p-1/2 mx-8 font-['Monserrat'] rounded-md h-14 justify-center">
+					<button className="flex items-center bg-green-700 text-white border-1/2 text-sm p-1/2 mx-8 font-['Monserrat'] rounded-md h-14 justify-center">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
@@ -45,7 +51,7 @@ function App() {
 							/>
 						</svg>
 						Add to Cart
-					</div>
+					</button>
 					</div>
 				</div>
 			</div>
