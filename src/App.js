@@ -8,35 +8,35 @@ function App() {
 	
 	console.log(windowWidth)
 	return (
-		<div className=" bg-primary-cream h-screen w-screen flex justify-center items-center pb-12">
-			<div className="border-2 rounded-xl mx-6 mt-12 h-full lg:w-10/12 bg-white lg:flex lg:items-center lg:justify-center lg:rounded-md lg:object-fill lg:min-h-0">
+		<div className="flex items-center justify-center flex-1 w-screen h-screen bg-primary-cream ">
+		<div
+			// style={{ height: "95%", width: "85%" }}
+			className="flex flex-col w-5/6 border-2 rounded-md bg-white md:flex-row h-5/6 md:h-3/6 md:w-3/6"
+		>
+			<div className="border-2 h-1/2 md:h-full md:w-1/2">
 				<img
-					className="rounded-t-xl"
+					className="object-fit"
 					src={imageFile}
-					alt="perfume for ad"
+					alt="product-display"
 				/>
-				<div className="lg:w-1/2 lg:m-5">
-					<div className="w-full h-1/6 text-neutral-dark-grayish-blue font-['Monserrat] text-xs pl-8 mt-6">
-						P E R F U M E
-					</div>
-
-					<div className="text-3xl pl-8 pb-2 w-full h-1/6 font-bold font-['fraunces']">
-						Gabrielle Essence Eau De Parfum
-					</div>
-
-					<div className="w-full h-1/6 text-sm relative p-1/2 text-neutral-dark-grayish-blue pl-8 ">
-						A floral, solar and voluptuous interpretation composed by Olivier Polge,
-						Perfumer-Creator for the House of CHANEL.
-					</div>
-					<div className="flex flex-row p-5 items-center justify-between">
-						<div className="w-full text-3xl pl-3 text-primary-dark-cyan font-['fraunces']">
-							$149.99
-						</div>
-						<div className="w-full line-through text-neutral-dark-grayish-blue">169.99</div>
+			</div>
+			<div className="flex flex-col justify-between px-2 py-2 h-1/2 md:h-full md:w-1/2">
+				<div className="text-neutral-dark-grayish-blue font-['Monserrat]">
+					P E R F U M E
 				</div>
-					<div className="justify-end">
-					<button className="flex items-center bg-green-700 text-white border-1/2 text-sm p-1/2 mx-8 font-['Monserrat'] rounded-md h-14 justify-center">
-						<svg
+
+				<div className="font-bold font-['fraunces']">Gabrielle Essence Eau De Parfum</div>
+				<div className='text-neutral-dark-grayish-blue'>
+					A floral, solar and voluptuous interpretation composed by Olivier Polge,
+					Perfumer-Creator for the House of CHANEL.    
+				</div>
+				<div className="justify-end flex flex-row items-center">
+					<div className="text-primary-dark-cyan font-['fraunces']">$149.99</div>
+					<div className="line-through text-neutral-dark-grayish-blue">169.99</div>
+				</div>
+				<div>
+					<button className="bg-green-700 text-white font-['Monserrat'] rounded-md justify-center"> 
+					<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
 							viewBox="0 0 24 24"
@@ -49,14 +49,13 @@ function App() {
 								strokeLinejoin="round"
 								d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
 							/>
-						</svg>
-						Add to Cart
-					</button>
-					</div>
+						</svg>Add to Cart</button>
 				</div>
 			</div>
 		</div>
-	);
+	</div>
+);
 }
+
 
 export default App;
