@@ -1,5 +1,5 @@
 import React from "react";
-import Test from "./Test";
+import { Link } from "react-router-dom";
 
 function App() {
 	const windowWidth = window.innerWidth;
@@ -8,7 +8,7 @@ function App() {
 		? (imageFile = "./images/image-product-mobile.jpg")
 		: (imageFile = "./images/image-product-desktop.jpg");
 
-	console.log(windowWidth);
+	// console.log(windowWidth);
 	return (
 		<div className="flex items-center justify-center flex-1 w-screen h-screen bg-primary-cream ">
 			<div
@@ -57,6 +57,15 @@ function App() {
 							Add to Cart
 						</button>
 					</div>
+					<nav
+						style={{
+							fontSize: "10px",
+							borderBottom: "solid 1px",
+							paddingBottom: "1rem",
+						}}
+					>
+						<Link to="/coupon">25% OFF Coupon!</Link>{" "}
+					</nav>
 				</div>
 			</div>
 		</div>
