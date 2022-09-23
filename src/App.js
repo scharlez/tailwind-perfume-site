@@ -37,6 +37,14 @@ function App() {
 						<div className="line-through text-neutral-dark-grayish-blue">
 							169.99
 						</div>
+						<nav
+							style={{
+								fontSize: "10px",
+								paddingLeft: "1rem",
+							}}
+						>
+							<Link to="/coupon">25% OFF Coupon!</Link>{" "}
+						</nav>
 					</div>
 					<div>
 						<button className="bg-green-700 text-white font-['Monserrat'] rounded-md justify-center">
@@ -57,15 +65,6 @@ function App() {
 							Add to Cart
 						</button>
 					</div>
-					<nav
-						style={{
-							fontSize: "10px",
-							borderBottom: "solid 1px",
-							paddingBottom: "1rem",
-						}}
-					>
-						<Link to="/coupon">25% OFF Coupon!</Link>{" "}
-					</nav>
 				</div>
 			</div>
 		</div>
